@@ -1,0 +1,131 @@
+.app {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    z-index: 100;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.item {
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px; /* 高さを250pxに増やす */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item h2 {
+    margin-top: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.item p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 16px; /* フォントサイズを16pxに増やす */
+}
+
+.blue {
+    background-color: rgba(52, 152, 219, 0.6);
+}
+.red {
+    background-color: rgba(231, 76, 60, 0.6);
+}
+.cyan {
+    background-color: rgba(0, 188, 212, 0.6);
+}
+.pink {
+    background-color: rgba(255, 64, 129, 0.6);
+}
+
+.blue h2,
+.red h2,
+.cyan h2,
+.pink h2 {
+    color: #fff;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.animate {
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1); /* scaleを1.1に増やす */
+    }
+}
+
+.report {
+    margin-top: 40px;
+    background-color: rgba(240, 240, 240, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report p {
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.report strong {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.report strong.blue {
+    color: #3498db;
+}
+.report strong.red {
+    color: #e74c3c;
+}
+.report strong.cyan {
+    color: #00bcd4;
+}
+.report strong.pink {
+    color: #ff4081;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
